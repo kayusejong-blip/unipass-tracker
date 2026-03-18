@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수입신고 상황 알림봇 - AG Bot</title>
+    <meta name="description" content="수입신고 및 화물 진행 정보를 실시간으로 추적하는 프리미엄 알림봇 서비스입니다." />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css?v=1.0" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <div class="logo">
+          <span class="logo-icon">📦</span>
+          <h1>알림봇 <span class="version">v1.3</span></h1>
+        </div>
+        <div class="header-actions">
+          <span class="user-greeting">반갑습니다, <strong>대장님</strong>!</span>
+          <button id="settingsBtn" class="icon-btn" title="설정">⚙️</button>
+        </div>
+      </header>
+
+      <!-- Settings Modal -->
+      <div id="settingsModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>알림 설정</h2>
+            <button class="close-modal">&times;</button>
+          </div>
+          <div class="settings-body">
+            <section class="settings-group">
+              <h3>📡 텔레그램 연동</h3>
+              <div class="field-item">
+                <label>Telegram Bot Token</label>
+                <input type="password" id="tgToken" placeholder="BotFather에게 받은 토큰 입력" />
+              </div>
+              <div class="field-item">
+                <label>Chat ID</label>
+                <input type="text" id="tgChatId" value="5826246844" readonly />
+              </div>
+              <button id="saveSettingsBtn" class="primary-btn">설정 저장</button>
+              <button id="testTgBtn" class="secondary-btn">테스트 발송</button>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+      <main class="dashboard">
+        <aside class="sidebar">
+          <section class="add-bl-section">
+            <h2>BL 번호 추가</h2>
+            <div class="input-group">
+              <input type="text" id="blInput" placeholder="2603100206" autocomplete="off" />
+              <button id="addBtn">추가</button>
+            </div>
+            <p class="input-hint">M B/L - H B/L 번호를 입력하세요.</p>
+          </section>
+          
+          <nav class="bl-list-nav">
+            <h2>관심 목록</h2>
+            <ul id="blList" class="bl-list">
+              <!-- BL Items will be injected here -->
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="content-area">
+          <div id="statusDetail" class="status-detail">
+            <div class="empty-state">
+              <p>왼쪽 목록에서 BL 번호를 선택하거나<br>새로운 번호를 추가해 보세요.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <div class="update-log">
+          <h3>업데이트 로그</h3>
+          <ul>
+            <li><strong>v1.0</strong>: 최초 UI 프레임워크 구축 (2026-03-18)</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js?v=1.0"></script>
+  </body>
+</html>

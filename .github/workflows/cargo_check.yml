@@ -1,0 +1,41 @@
+# [v1.5] 24시간 무정전 화물 상태 알림봇
+name: Cargo Status 30m Check
+
+on:
+  schedule:
+    # 매 30분마다 자동 실행 (UTC 기준)
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+    # 수동 실행 허용
+
+jobs:
+  check-cargo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 코드 가져오기
+        uses: actions/checkout@v3
+
+      - name: Node.js 환경 설정
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 종속성 설치
+        run: npm install
+
+      - name: 화물 상태 체크 실행
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: node checker.cjs
+
+      - name: 변경 사항 저장 (히스토리 커밋)
+        run: |
+          git config --global user.name "AG-Bot"
+          git config --global user.email "bot@antigravity.ai"
+          git add data/status_history.json
+          git commit -m "chore: update cargo history [skip ci]" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
