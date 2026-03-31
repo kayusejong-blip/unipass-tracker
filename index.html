@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css?v=1.0" />
+    <link rel="stylesheet" href="/src/style.css?v=1.9" />
   </head>
   <body>
     <div id="app">
       <header class="app-header">
         <div class="logo">
           <span class="logo-icon">📦</span>
-          <h1>알림봇 <span class="version">v1.3</span></h1>
+          <h1>AG-Bot <span class="version">v3.5</span></h1>
         </div>
         <div class="header-actions">
-          <span class="user-greeting">반갑습니다, <strong>대장님</strong>!</span>
+          <span class="user-greeting">반갑습니다, <strong>대장님</strong> 🫡</span>
           <button id="settingsBtn" class="icon-btn" title="설정">⚙️</button>
         </div>
       </header>
@@ -33,17 +33,29 @@
           </div>
           <div class="settings-body">
             <section class="settings-group">
+              <h3>☁️ GitHub 서버리스 연동</h3>
+              <div class="field-item">
+                <label>GitHub Repo</label>
+                <input type="text" id="ghRepo" placeholder="예: username/my-repo" />
+              </div>
+              <div class="field-item">
+                <label>GitHub PAT Token</label>
+                <input type="password" id="ghToken" placeholder="ghp_..." />
+              </div>
+              <hr style="margin: 20px 0; border: 0; border-top: 1px solid hsla(0,0%,100%,0.1);" />
               <h3>📡 텔레그램 연동</h3>
               <div class="field-item">
                 <label>Telegram Bot Token</label>
-                <input type="password" id="tgToken" placeholder="BotFather에게 받은 토큰 입력" />
+                <input type="password" id="tgToken" placeholder="BotFather 토큰" />
               </div>
               <div class="field-item">
                 <label>Chat ID</label>
                 <input type="text" id="tgChatId" value="5826246844" readonly />
               </div>
-              <button id="saveSettingsBtn" class="primary-btn">설정 저장</button>
-              <button id="testTgBtn" class="secondary-btn">테스트 발송</button>
+              <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="saveSettingsBtn" class="primary-btn" style="flex: 1;">설정 저장</button>
+                <button id="testTgBtn" class="secondary-btn">테스트 핑</button>
+              </div>
             </section>
           </div>
         </div>
@@ -62,9 +74,9 @@
           
           <nav class="bl-list-nav">
             <h2>관심 목록</h2>
-            <ul id="blList" class="bl-list">
-              <!-- BL Items will be injected here -->
-            </ul>
+            <div id="blList" class="bl-list">
+              <!-- JS 렌더링 -->
+            </div>
           </nav>
         </aside>
 
@@ -75,17 +87,34 @@
             </div>
           </div>
         </section>
+
+        <!-- [v3.2] 우측 요약 패널 추가 -->
+        <aside class="right-panel" id="rightPanel">
+          <div class="panel-placeholder">
+            <span class="icon">🔍</span>
+            <p>번호를 선택하시면<br><strong>수송 및 규격 정보</strong>가<br>이곳에 표시됩니다.</p>
+          </div>
+        </aside>
       </main>
 
       <footer class="app-footer">
         <div class="update-log">
           <h3>업데이트 로그</h3>
           <ul>
-            <li><strong>v1.0</strong>: 최초 UI 프레임워크 구축 (2026-03-18)</li>
+            <li><strong>v3.5</strong>: 관세청 유니패스에서 제공하는 전체 물류 항목(MB/L, 컨테이너 정보 등)으로 사이드 패널 데이터 대폭 확장 (2026-03-31)</li>
+            <li><strong>v3.4</strong>: 실시간 조회 시 상세 내역(진행 타임라인) 누락 동기화 오류 완전 수정 (2026-03-31)</li>
+            <li><strong>v3.2</strong>: 우측 상세 패널 추가 및 수송/규격 정보 확장 (2026-03-31)</li>
+            <li><strong>v3.1</strong>: 프리미엄 라이트 모드 UI 디자인 적용 (2026-03-31)</li>
+            <li><strong>v3.0</strong>: 유니패스 오픈 API(API001) 정식 연동 - 속도/안정성 혁신 (2026-03-31)</li>
+            <li><strong>v2.3</strong>: 유니패스 보안 정책 대응(savedToken) 및 즉시 조회 버튼 버그 수정 (2026-03-25)</li>
+            <li><strong>v2.2</strong>: 실시간 '즉시 조회' 기능 및 추가 시 자동 체크 구현 (2026-03-25)</li>
+            <li><strong>v2.1</strong>: 백엔드 엔진 실시간 데이터 동기화 (2026-03-25)</li>
+            <li><strong>v2.0</strong>: 목록 관리(개별/전체 삭제) 및 UI 고도화 (2026-03-25)</li>
+            <li><strong>v1.9</strong>: 실행기 도입 및 실시간 데이터 보정 (2026-03-24)</li>
           </ul>
         </div>
       </footer>
     </div>
-    <script type="module" src="/src/main.js?v=1.0"></script>
+    <script type="module" src="/src/main.js?v=3.5"></script>
   </body>
 </html>

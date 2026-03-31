@@ -1,1 +1,83 @@
-{}
+{
+  "2603040106": {
+    "status": "수입신고수리",
+    "itemName": "BINOCULARS BUBBLE WRAP PLASTIC BAG INSOLE SCARF ZEROMEDICAL WIRST01",
+    "lastChecked": "2026-03-31T06:03:10.664Z",
+    "lastProcessDate": "2026. 3. 31. PM 3:03:10"
+  },
+  "2603100206": {
+    "status": "수입신고수리",
+    "itemName": "SQUARE SELFADHESIVE CARPET TILES ZEROMEDICAL FC01",
+    "lastChecked": "2026-03-31T06:41:21.400Z",
+    "lastProcessDate": "2026. 3. 31. PM 3:41:21",
+    "extra": {
+      "shipNm": "PES ALIOTH",
+      "voyageNo": "2609",
+      "shipNat": "파나마",
+      "lodPort": "Qingdao",
+      "dsprPort": "인천항",
+      "eta": "2026-03-17",
+      "msrm": "28.28",
+      "ttwg": "3913",
+      "cntrGcnt": "1",
+      "mblNo": "WDFCPES26092397",
+      "cargMtNo": "26WDFCP609I12410007",
+      "cargTp": "수입 일반화물",
+      "blPtNm": "Consol",
+      "shcoFlco": "(주)위동해운",
+      "frwrEntsConm": "주식회사 해원해운항공",
+      "cntrNo": "WDFU7003123",
+      "etprCstm": "인천세관"
+    }
+  },
+  "2603130056": {
+    "status": "수입신고수리",
+    "itemName": "APRON DIY DESK PORCELAIN DECORATIVE VASE RUNNING BELT SQUARE SELFADHESIVE CARPET TILES SAMPLE ZEROMEDICAL NC900 ZMNWK100",
+    "lastChecked": "2026-03-31T06:41:19.269Z",
+    "lastProcessDate": "2026. 3. 31. PM 3:41:19",
+    "extra": {
+      "shipNm": "XIN XIANG XUE LAN",
+      "voyageNo": "NXL1536",
+      "shipNat": "중국",
+      "lodPort": "Yantai Laishan International Apt",
+      "dsprPort": "인천항",
+      "eta": "2026-03-24",
+      "msrm": "3.78",
+      "ttwg": "415",
+      "cntrGcnt": "1",
+      "mblNo": "ZHINX1536139",
+      "cargMtNo": "26KCFL1536I00570005",
+      "cargTp": "수입 일반화물",
+      "blPtNm": "Consol",
+      "shcoFlco": "(주)한중훼리",
+      "frwrEntsConm": "주식회사 해원해운항공",
+      "cntrNo": "ZHFU9930979",
+      "etprCstm": "인천세관"
+    }
+  },
+  "2603190021": {
+    "status": "수입(사용소비) 결재통보",
+    "itemName": "APRON APRON CLOTHES HANGER FITNESS WEIGHTED VEST MEDICINE BALL TSHIRT TSHIRT",
+    "lastChecked": "2026-03-31T06:41:20.334Z",
+    "lastProcessDate": "2026. 3. 31. PM 3:41:20",
+    "extra": {
+      "shipNm": "XIN XIANG XUE LAN",
+      "voyageNo": "NXL1542",
+      "shipNat": "중국",
+      "lodPort": "Yantai Laishan International Apt",
+      "dsprPort": "인천항",
+      "eta": "2026-03-31",
+      "msrm": "14.8",
+      "ttwg": "4253",
+      "cntrGcnt": "1",
+      "mblNo": "ZHINX1542137",
+      "cargMtNo": "26KCFL1542I00600004",
+      "cargTp": "수입 일반화물",
+      "blPtNm": "Consol",
+      "shcoFlco": "(주)한중훼리",
+      "frwrEntsConm": "주식회사 해원해운항공",
+      "cntrNo": "ZHFU9950131",
+      "etprCstm": "인천세관"
+    }
+  }
+}

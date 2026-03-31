@@ -1,0 +1,38 @@
+name: Import Declaration Tracker (Ag-Bot)
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # 매 10분마다 실행
+  workflow_dispatch: # 수동 실행 버튼 활성화
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 저장소 소스코드 체크아웃
+        uses: actions/checkout@v4
+      
+      - name: Node.js 환경 세팅
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 패키지 설치
+        run: npm install axios cheerio dotenv
+        
+      - name: 백그라운드 모니터 작동 (server.cjs 호환 Action 스크립트)
+        env:
+          UNIPASS_API_KEY: ${{ secrets.UNIPASS_API_KEY }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: node action_monitor.cjs
+
+      - name: 변경된 히스토리 저장소에 자동 커밋 (상태 변경 감지 시점)
+        run: |
+          git config --global user.name "AG-Bot-Action"
+          git config --global user.email "bot@antigravity.kr"
+          git add data/status_history.json
+          # 변경사항이 있을 때만 커밋 및 푸시
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [자동] 화물 상태 업데이트" && git push)
