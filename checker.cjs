@@ -8,7 +8,7 @@ const path = require('path');
 require('dotenv').config();
 
 // 설정 (환경 변수 우선)
-const TG_TOKEN = process.env.TG_TOKEN || '8599634247:AAFxtif1sMu1yqibBBR7Ce1m3Q_SKWKS4i8';
+const TG_TOKEN = process.env.TG_TOKEN || '';
 const TG_CHAT_ID = process.env.TG_CHAT_ID || '5826246844';
 const BL_LIST_PATH = path.join(__dirname, 'data', 'bl_list.json');
 const HISTORY_PATH = path.join(__dirname, 'data', 'status_history.json');

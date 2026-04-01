@@ -568,10 +568,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // 설정 로드
     const loadSettings = () => {
         const defaultSettings = { 
-            tgToken: '8599634247:AAFxtif1sMu1yqibBBR7Ce1m3Q_SKWKS4i8', 
-            tgChatId: '5826246844',
-            ghRepo: '',
-            ghToken: ''
+            ghToken: '',
+            ghRepo: 'kayusejong-blip/unipass-tracker',
+            tgToken: '', 
+            tgChatId: '',
         };
         const settings = JSON.parse(localStorage.getItem('ag_settings')) || defaultSettings;
         

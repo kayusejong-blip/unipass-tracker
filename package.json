@@ -12,9 +12,10 @@
     "vite": "^8.0.0"
   },
   "dependencies": {
-    "axios": "^1.13.6",
+    "axios": "^1.14.0",
     "cheerio": "^1.2.0",
     "dotenv": "^17.3.1",
-    "form-data": "^4.0.5"
+    "form-data": "^4.0.5",
+    "libsodium-wrappers": "^0.8.2"
   }
 }

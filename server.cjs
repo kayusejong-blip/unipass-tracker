@@ -196,7 +196,7 @@ const server = http.createServer(async (req, res) => {
 
 // [v3.3] 실시간 상태 모니터링 루프 (Background Monitor)
 // 대장님, 서버가 켜져 있는 동안 30분마다 자동으로 상태를 체크하여 텔레그램으로 보고합니다!
-const TG_TOKEN = process.env.TG_TOKEN || '8599634247:AAFxtif1sMu1yqibBBR7Ce1m3Q_SKWKS4i8';
+const TG_TOKEN = process.env.TG_TOKEN || '';
 const TG_CHAT_ID = process.env.TG_CHAT_ID || '5826246844';
 
 const sendTelegram = async (message) => {

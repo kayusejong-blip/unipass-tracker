@@ -1,5 +1,5 @@
 const axios = require('axios');
-const TG_TOKEN = process.env.TG_TOKEN || '8599634247:AAFxtif1sMu1yqibBBR7Ce1m3Q_SKWKS4i8';
+const TG_TOKEN = process.env.TG_TOKEN || '';
 const TG_CHAT_ID = process.env.TG_CHAT_ID || '5826246844';
 
 const testTelegram = async () => {
