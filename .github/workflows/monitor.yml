@@ -37,4 +37,4 @@ jobs:
           git config --global user.email "bot@antigravity.kr"
           git add data/status_history.json
           # 변경사항이 있을 때만 커밋 및 푸시
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [자동] 화물 상태 업데이트" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [자동] 화물 상태 업데이트" && git pull --rebase origin main && git push)
