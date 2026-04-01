@@ -1,4 +1,29 @@
 {
+  "2601220032": {
+    "status": "수입신고수리",
+    "itemName": "BINOCULARS SANDPAPER SLEEPWEAR SOCKS SET SQUARE SELFADHESIVE CARPET TILES WRIST GUARDS  ZEROMEDICAL",
+    "lastChecked": "2026-04-01T06:24:52.035Z",
+    "lastProcessDate": "2026. 4. 1. PM 3:24:52",
+    "extra": {
+      "shipNm": "NEWGOLDENBRIDGE 5",
+      "voyageNo": "3220",
+      "shipNat": "파나마",
+      "lodPort": "Qingdao",
+      "dsprPort": "인천항",
+      "eta": "2026-02-05",
+      "msrm": "10.4",
+      "ttwg": "1271",
+      "cntrGcnt": "1",
+      "mblNo": "WDFCGBF32202396",
+      "cargMtNo": "26WDFCF220I04160005",
+      "cargTp": "수입 일반화물",
+      "blPtNm": "Consol",
+      "shcoFlco": "(주)위동해운",
+      "frwrEntsConm": "주식회사 해원해운항공",
+      "cntrNo": "WDFU7000145",
+      "etprCstm": "인천세관"
+    }
+  },
   "2603040106": {
     "status": "수입신고수리",
     "itemName": "BINOCULARS BUBBLE WRAP PLASTIC BAG INSOLE SCARF ZEROMEDICAL WIRST01",
@@ -58,8 +83,8 @@
   "2603190021": {
     "status": "수입신고수리",
     "itemName": "APRON APRON CLOTHES HANGER FITNESS WEIGHTED VEST MEDICINE BALL TSHIRT TSHIRT",
-    "lastChecked": "2026-04-01T06:16:31.889Z",
-    "lastProcessDate": "2026. 4. 1. PM 3:16:31",
+    "lastChecked": "2026-04-01T06:24:46.847Z",
+    "lastProcessDate": "2026. 4. 1. PM 3:24:46",
     "extra": {
       "shipNm": "XIN XIANG XUE LAN",
       "voyageNo": "NXL1542",
